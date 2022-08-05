@@ -48,9 +48,6 @@ resource "google_apigee_instance" "apigee_instance" {
   location = var.region
   org_id   = google_apigee_organization.apigeex_org.id
 }
-resource "google_apigee_instance_attachment" "apigee_instance_attachment" {
-  instance_id  = google_apigee_instance.apigee_instance.id
-}
 resource "google_compute_region_backend_service" "producer_service_backend" {
   name          = var.google_compute_region_backend_service
   project       = var.project_id
