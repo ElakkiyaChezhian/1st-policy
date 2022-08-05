@@ -50,7 +50,6 @@ resource "google_apigee_instance" "apigee_instance" {
 }
 resource "google_apigee_instance_attachment" "apigee_instance_attachment" {
   instance_id  = google_apigee_instance.apigee_instance.id
-  environment  = google_apigee_environment.apigee_org_region_env.name
 }
 resource "google_compute_region_backend_service" "producer_service_backend" {
   name          = var.google_compute_region_backend_service
